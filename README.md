@@ -1,34 +1,32 @@
-# RecipeBlog-MongoDB-Node.js
+# CookingBlog 🍴
 
-Bu proje, MongoDB ve Node.js kullanılarak yapılmış bir yemek tarifi blogudur. Bu uygulama, kullanıcıların hesap oluşturmasına, giriş yapmasına ve yemek tarifleri paylaşmasına olanak tanır.
+CookingBlog is a responsive food blog website built with Nodejs and MongoDB. The website features a clean and modern design, with easy navigation and beautiful images of various foods.
 
-## Kurulum
+## Features
 
-1. Projeyi kendi bilgisayarınıza indirin veya klonlayın.
-2. Projenin ana dizinine gidin ve `npm install` yazarak gerekli bağımlılıkları yükleyin.
-3. Veritabanı için MongoDB Atlas hesabı oluşturun ve projenin `.env` dosyasında belirtilen veritabanı URL'sini (MONGODB_URI) güncelleyin.
-4. Uygulamayı başlatmak için `npm start` yazın.
+- Responsive design: The website is optimized for all screen sizes, from desktop to mobile.
+- Recipe categories: Users can browse recipes by category, such as breakfast, lunch, dinner, and dessert.
+- Search functionality: Users can search for recipes using keywords or ingredients.
+- Recipe pages: Each recipe has its own page with detailed instructions, ingredients, nutritional information, and related recipes.
+- Contact form: Users can send feedback or inquiries using the contact form on the website.
 
-## Kullanım
+## Getting Started
 
-Uygulama, `localhost:3000` adresinde çalışmaktadır. Tarayıcınızda bu adresi açarak uygulamaya erişebilirsiniz.
+To run this project locally, simply clone the repository and open the `index.html` file in your web browser. That's it!
 
-### Kayıt Olma ve Giriş Yapma
+## Contributing
 
-Kayıt olmadan önce, bir hesap oluşturmanız gerekmektedir. Ana sayfadaki "Sign Up" butonuna tıklayarak yeni bir hesap oluşturabilirsiniz. Kayıt olduktan sonra, "Log in" butonuna tıklayarak hesabınıza giriş yapabilirsiniz.
+If you would like to contribute to this project, feel free to submit a pull request with your changes. Before submitting a pull request, please make sure that your code follows the existing coding style and is thoroughly tested.
 
-### Yemek Tarifleri
+## License
 
-Hesabınıza giriş yaptıktan sonra, "New Recipe" butonuna tıklayarak yeni bir yemek tarifi ekleyebilirsiniz. Ayrıca, "Recipes" sayfasında diğer kullanıcıların paylaştığı yemek tariflerini görüntüleyebilirsiniz.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### Profil
+## Acknowledgments
 
-Profil sayfanızda, hesap bilgilerinizi ve eklediğiniz yemek tariflerini görüntüleyebilirsiniz. Ayrıca, istediğiniz zaman hesabınızdan çıkış yapabilirsiniz.
+- Images used on this website were sourced from Unsplash and Pexels.
+- This project was inspired by my love for cooking and sharing new recipes with others.
 
-## Katkıda Bulunma
+---
 
-Bu proje açık kaynak olarak geliştirilmiştir ve her türlü katkıda bulunmaya açıktır. Lütfen bir pull request göndermeden önce değişikliklerinizin test edildiğinden emin olun.
-
-## Lisans
-
-Bu proje MIT lisansı ile lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına bakın.
+By building CookingBlog, I wanted to showcase my skills with front-end web development and create a platform for sharing my passion for cooking with others. I hope you enjoy browsing the website and trying out some of the delicious recipes!
