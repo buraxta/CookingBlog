@@ -82,3 +82,52 @@ exports.exploreRecipe = async(req, res) => {
     res.status(500).send({message: error.message || "Error Occured"});
   }
 }
+
+
+/*
+ * POST /search
+ * Search
+ */
+exports.searchRecipe = async(req, res) => {
+  try {
+    let searchTerm = req.body.searchTerm;
+    let recipe = await Recipe.find({ $text: { $search: searchTerm, $diacriticSensitive: true}});
+    res.render('search', {title: 'Cooking Blog - Search', recipe});
+  } catch (error) {
+    res.status(500).send({message: error.message ||  'Error Occured'});
+  }
+
+} 
+
+
+/*
+ * GET /explore-latest
+ * Explore Latest
+ */
+
+exports.exploreLatest = async(req, res) => {
+  try {
+    const limitNumber = 20;
+    const recipe = await Recipe.find({}).sort({ _id: -1 }).limit(limitNumber);
+    res.render('explore-latest', {title: 'Cooking Blog - Explore Latest', recipe});
+  } catch (error) {
+    res.status(500).send({message: error.message || "Error Occured"});
+  }
+}
+
+
+/*
+ * GET /explore-random
+ * Explore Random
+ */
+
+exports.exploreRandom = async(req, res) => {
+  try {
+    let count = await Recipe.find().countDocuments();
+    let random = Math.floor(Math.random() * count);
+    let recipe = await Recipe.findOne().skip(random).exec();
+    res.render('explore-random', {title: 'Cooking Blog - Explore Random', recipe});
+  } catch (error) {
+    res.status(500).send({message: error.message || "Error Occured"});
+  }
+}
